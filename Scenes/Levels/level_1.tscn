@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://bkn6eoqfjofwa"]
+[gd_scene load_steps=43 format=3 uid="uid://bkn6eoqfjofwa"]
 
 [ext_resource type="Material" path="res://Materials/GrayChecker.tres" id="1_oruii"]
 [ext_resource type="PackedScene" uid="uid://b0q0bnia378s4" path="res://Scenes/Player.tscn" id="2_maot8"]
@@ -8,25 +8,6 @@
 [ext_resource type="AudioStream" uid="uid://mw12jwq2ajfe" path="res://Scenes/Components/Sound/Exterior Ambience.ogg" id="6_t1tbc"]
 [ext_resource type="ArrayMesh" uid="uid://dj27wgf185m7j" path="res://Scenes/Components/Models/Prop/Campfire.obj" id="7_jlihg"]
 [ext_resource type="AudioStream" uid="uid://whnxci8owf2k" path="res://Scenes/Components/Sound/Campfire Cooking.ogg" id="7_pkkfw"]
-
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_tl2et"]
-sky_top_color = Color(0.0431373, 0, 0.45098, 1)
-sky_horizon_color = Color(0.515686, 0.502941, 0.614706, 1)
-sky_energy_multiplier = 0.5
-ground_bottom_color = Color(0.0196078, 0.0117647, 0.00784314, 1)
-ground_horizon_color = Color(0.515686, 0.502941, 0.614706, 1)
-
-[sub_resource type="Sky" id="Sky_x5a1c"]
-sky_material = SubResource("ProceduralSkyMaterial_tl2et")
-
-[sub_resource type="Environment" id="Environment_24o1r"]
-background_mode = 2
-sky = SubResource("Sky_x5a1c")
-ssao_enabled = true
-sdfgi_enabled = true
-glow_enabled = true
-volumetric_fog_enabled = true
-volumetric_fog_albedo = Color(0.564706, 0.270588, 0, 1)
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ib2wi"]
 radius = 1.16532
@@ -39,13 +20,37 @@ radius = 0.894627
 inner_radius = 2.253
 outer_radius = 3.927
 
+[sub_resource type="BoxMesh" id="BoxMesh_8s2wg"]
+size = Vector3(10, 8, 3)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5gnnh"]
+size = Vector3(10, 8, 3)
+
+[sub_resource type="BoxMesh" id="BoxMesh_7rj73"]
+size = Vector3(10, 10, 3)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_clduw"]
+size = Vector3(10, 10, 3)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_aawcl"]
+size = Vector3(10, 10, 3)
+
+[sub_resource type="BoxMesh" id="BoxMesh_jxlph"]
+size = Vector3(16, 12, 3)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jw880"]
+size = Vector3(16, 12, 3)
+
 [sub_resource type="BoxMesh" id="BoxMesh_w2sya"]
 size = Vector3(20, 8, 3)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_xwjia"]
-size = Vector3(15, 8, 3)
+[sub_resource type="BoxShape3D" id="BoxShape3D_dbfk8"]
+size = Vector3(20, 8, 3)
 
 [sub_resource type="BoxMesh" id="BoxMesh_jgt62"]
+size = Vector3(15, 8, 3)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xwjia"]
 size = Vector3(15, 8, 3)
 
 [sub_resource type="BoxMesh" id="BoxMesh_jfx0i"]
@@ -121,15 +126,6 @@ size = Vector3(5.7549, 3.77124, 1)
 metadata/_edit_lock_ = true
 
 [node name="Environment" type="Node3D" parent="."]
-
-[node name="Sun" type="DirectionalLight3D" parent="Environment"]
-transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
-light_color = Color(0.513726, 0.513726, 0.513726, 1)
-light_energy = 5.0
-shadow_enabled = true
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="Environment"]
-environment = SubResource("Environment_24o1r")
 
 [node name="Nozomi Ringo" parent="." instance=ExtResource("2_maot8")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 12, 1.5, 0)
@@ -208,6 +204,71 @@ mesh = SubResource("TorusMesh_yokw6")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Cave System/Cavewalls/Cave Ring"]
 
+[node name="Cavewall24" type="StaticBody3D" parent="Cave System/Cavewalls"]
+transform = Transform3D(-0.0379384, 0.332467, -0.942351, -0.227813, 0.915313, 0.332101, 0.972955, 0.227281, 0.0410179, -5.08956, 8.34856, 15.8795)
+collision_layer = 2
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Cave System/Cavewalls/Cavewall24"]
+transform = Transform3D(1, 7.45058e-09, 0, -1.49012e-08, 1, 0, -7.45058e-09, 0, 1, 0, 0, 0)
+mesh = SubResource("BoxMesh_8s2wg")
+skeleton = NodePath("../../Cavewall24")
+surface_material_override/0 = ExtResource("1_oruii")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cave System/Cavewalls/Cavewall24"]
+shape = SubResource("BoxShape3D_5gnnh")
+
+[node name="Cavewall23" type="StaticBody3D" parent="Cave System/Cavewalls"]
+transform = Transform3D(0.574125, 0.588686, 0.569052, -0.367663, 0.806361, -0.463247, -0.731564, 0.056741, 0.679397, -8.67861, 12.9882, 13.4049)
+collision_layer = 2
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Cave System/Cavewalls/Cavewall23"]
+transform = Transform3D(1, 7.45058e-09, 0, -1.49012e-08, 1, 0, -7.45058e-09, 0, 1, 0, 0, 0)
+mesh = SubResource("BoxMesh_7rj73")
+skeleton = NodePath("../../Cavewall23")
+surface_material_override/0 = ExtResource("1_oruii")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cave System/Cavewalls/Cavewall23"]
+shape = SubResource("BoxShape3D_clduw")
+
+[node name="Cavewall23" type="StaticBody3D" parent="Cave System/Cavewalls/Cavewall23"]
+transform = Transform3D(0.424472, 0.0894388, 0.901012, 0.050393, 0.991229, -0.122138, -0.904027, 0.0972481, 0.416243, -5.13535, -0.416633, 3.27806)
+collision_layer = 2
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Cave System/Cavewalls/Cavewall23/Cavewall23"]
+transform = Transform3D(1, 7.45058e-09, 0, -1.49012e-08, 1, 0, -7.45058e-09, 0, 1, 0, 0, 0)
+mesh = SubResource("BoxMesh_7rj73")
+skeleton = NodePath("../../Cavewall23")
+surface_material_override/0 = ExtResource("1_oruii")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cave System/Cavewalls/Cavewall23/Cavewall23"]
+shape = SubResource("BoxShape3D_clduw")
+
+[node name="Cavewall22" type="StaticBody3D" parent="Cave System/Cavewalls"]
+transform = Transform3D(0.877292, -0.191872, -0.439929, -0.0620789, -0.954278, 0.292394, -0.475914, -0.229203, -0.849098, -8.65992, 9.87795, 21.1784)
+collision_layer = 2
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Cave System/Cavewalls/Cavewall22"]
+transform = Transform3D(1, 7.45058e-09, 0, -1.49012e-08, 1, 0, -7.45058e-09, 0, 1, 0, 0, 0)
+mesh = SubResource("BoxMesh_7rj73")
+skeleton = NodePath("../../Cavewall22")
+surface_material_override/0 = ExtResource("1_oruii")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cave System/Cavewalls/Cavewall22"]
+shape = SubResource("BoxShape3D_aawcl")
+
+[node name="Cavewall21" type="StaticBody3D" parent="Cave System/Cavewalls"]
+transform = Transform3D(0.978569, -0.12657, 0.162414, 0.133536, -0.210336, -0.968466, 0.156736, 0.969402, -0.188922, -20.3826, 7.81587, 18.8344)
+collision_layer = 2
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Cave System/Cavewalls/Cavewall21"]
+transform = Transform3D(1, 7.45058e-09, 0, -1.49012e-08, 1, 0, -7.45058e-09, 0, 1, 0, 0, 0)
+mesh = SubResource("BoxMesh_jxlph")
+skeleton = NodePath("../../Cavewall21")
+surface_material_override/0 = ExtResource("1_oruii")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cave System/Cavewalls/Cavewall21"]
+shape = SubResource("BoxShape3D_jw880")
+
 [node name="Cavewall20" type="StaticBody3D" parent="Cave System/Cavewalls"]
 transform = Transform3D(-0.987534, -0.0560126, 0.147095, -0.0971436, -0.518393, -0.849606, 0.123841, -0.853307, 0.506487, -19.4123, 6.81225, 11.3863)
 collision_layer = 2
@@ -219,10 +280,10 @@ skeleton = NodePath("../../Cavewall20")
 surface_material_override/0 = ExtResource("1_oruii")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Cave System/Cavewalls/Cavewall20"]
-shape = SubResource("BoxShape3D_xwjia")
+shape = SubResource("BoxShape3D_dbfk8")
 
 [node name="Cavewall19" type="StaticBody3D" parent="Cave System/Cavewalls"]
-transform = Transform3D(0.135036, 0.937619, 0.320367, -0.114786, -0.306348, 0.944971, 0.98417, -0.164378, 0.0662542, -5.93116, 7.01426, 15.1653)
+transform = Transform3D(0.135036, 0.937619, 0.320367, -0.114786, -0.306348, 0.944971, 0.98417, -0.164378, 0.0662542, -4.46327, 6.87237, 15.1653)
 collision_layer = 2
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Cave System/Cavewalls/Cavewall19"]
