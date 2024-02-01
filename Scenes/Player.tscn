@@ -1,20 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://b0q0bnia378s4"]
+[gd_scene load_steps=3 format=3 uid="uid://b0q0bnia378s4"]
 
 [ext_resource type="Script" path="res://Scripts/FirstPersonController.gd" id="1_qtton"]
-
-[sub_resource type="CapsuleMesh" id="1"]
 
 [sub_resource type="CapsuleShape3D" id="2"]
 
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_qtton")
 
-[node name="MeshInstance" type="MeshInstance3D" parent="."]
-mesh = SubResource("1")
-
 [node name="CollisionShape" type="CollisionShape3D" parent="."]
 shape = SubResource("2")
 
 [node name="Camera" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 1.1, 2.08165e-12)
-fov = 37.8493
+fov = 60.0
