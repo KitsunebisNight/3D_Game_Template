@@ -13,7 +13,6 @@ export_presets.cfg
 data_*/
 Ignore/
 *.import
-addons/
 demo/
 Builds/
 
