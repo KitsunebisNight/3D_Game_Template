@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bjfidwt6yy8lv"]
+
+[ext_resource type="Texture2D" uid="uid://utr1a7npjei5" path="res://Textures/grid_0.png" id="1"]
+
+[resource]
+albedo_color = Color(0, 1, 0.623529, 1)
+albedo_texture = ExtResource("1")
+metallic = 1.0
+metallic_specular = 0.73
+uv1_scale = Vector3(0.5, 0.5, 0.5)
+uv1_triplanar = true
