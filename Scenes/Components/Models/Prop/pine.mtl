@@ -1,0 +1,10 @@
+newmtl nature_bark_pear_01_l_0001
+Ka 0.2 0.2 0.2
+Kd 1 1 1
+Ks 1 1 1
+Tr 0
+illum 5
+d 1
+Ns 2
+map_Kd t:\pov3dmodel\textures\nature_bark_pear_01_l_0001.jpg
+
