@@ -22,6 +22,7 @@ var grav_vel: Vector3 # Gravity velocity
 var jump_vel: Vector3 # Jumping velocity
 
 @onready var camera: Camera3D = $Camera
+@onready var anim_play = $Camera/AnimationPlayer
 
 func _ready() -> void:
 	capture_mouse()
@@ -37,6 +38,8 @@ func _physics_process(delta: float) -> void:
 	if mouse_captured: _handle_joypad_camera_rotation(delta)
 	velocity = _walk(delta) + _gravity(delta) + _jump(delta)
 	move_and_slide()
+	if move_dir != Vector2():
+		anim_play.play("Walk")
 
 func capture_mouse() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)

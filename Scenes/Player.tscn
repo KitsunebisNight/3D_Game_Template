@@ -1,8 +1,88 @@
-[gd_scene load_steps=3 format=3 uid="uid://b0q0bnia378s4"]
+[gd_scene load_steps=7 format=3 uid="uid://b0q0bnia378s4"]
 
 [ext_resource type="Script" path="res://Scripts/FirstPersonController.gd" id="1_qtton"]
+[ext_resource type="AudioStream" uid="uid://bf8lw1dojr5vw" path="res://Scenes/Components/Sound/Footsteps.ogg" id="2_mp4wd"]
 
 [sub_resource type="CapsuleShape3D" id="2"]
+
+[sub_resource type="Animation" id="Animation_i8d34"]
+resource_name = "Walk"
+length = 2.0
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0),
+"points": PackedFloat32Array(2.08165e-12, -0.25, 0, 0.25, 0, 0.075, -0.25, 0, 0.25, 0, 0.175, -0.25, 0, 0.25, 0, 0.075, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0),
+"points": PackedFloat32Array(1.1, -0.25, 0, 0.25, 0, 1.292, -0.25, 0, 0.25, 0, 1.1, -0.25, 0, 0.25, 0, 1.292, -0.25, 0, 0.25, 0, 1.1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:position:z")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2)
+}
+
+[sub_resource type="Animation" id="Animation_wce3o"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(2.08165e-12, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1.08181, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:position:z")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_c10pu"]
+_data = {
+"RESET": SubResource("Animation_wce3o"),
+"Walk": SubResource("Animation_i8d34")
+}
 
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_qtton")
@@ -11,5 +91,31 @@ script = ExtResource("1_qtton")
 shape = SubResource("2")
 
 [node name="Camera" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 1.1, 2.08165e-12)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 1.08181, 0)
 fov = 60.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Camera"]
+libraries = {
+"": SubResource("AnimationLibrary_c10pu")
+}
+speed_scale = 1.5
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Camera"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.220847, -0.87938, -2.08165e-12)
+light_color = Color(0.996078, 1, 0.752941, 1)
+light_energy = 3.0
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 8.0
+spot_range = 16.0
+spot_attenuation = 0.003
+spot_angle = 10.0
+spot_angle_attenuation = 33.1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Camera/SpotLight3D"]
+
+[node name="Footsteps" type="Node3D" parent="."]
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Footsteps"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.586383, 0)
+stream = ExtResource("2_mp4wd")
+max_distance = 6.0
