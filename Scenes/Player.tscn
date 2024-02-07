@@ -104,9 +104,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.220847, -0.87938, -2.08165
 light_color = Color(0.996078, 1, 0.752941, 1)
 light_energy = 3.0
 light_volumetric_fog_energy = 8.0
-spot_range = 16.0
+spot_range = 23.9099
 spot_attenuation = 0.003
-spot_angle = 10.0
+spot_angle = 12.4198
 spot_angle_attenuation = 33.1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Camera/SpotLight3D"]
