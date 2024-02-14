@@ -3,6 +3,8 @@
 [ext_resource type="Script" path="res://Scripts/FirstPersonController.gd" id="1_qtton"]
 
 [sub_resource type="CapsuleShape3D" id="2"]
+radius = 0.579249
+height = 2.34864
 
 [sub_resource type="Animation" id="Animation_wce3o"]
 length = 0.001
