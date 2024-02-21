@@ -102,10 +102,10 @@ libraries = {
 speed_scale = 1.5
 
 [node name="SpotLight3D" type="SpotLight3D" parent="Camera"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.220847, -0.87938, -2.08165e-12)
+transform = Transform3D(1, 0, 0, 0, 0.99469, 0.102914, 0, -0.102914, 0.99469, -0.220847, -0.87938, -2.08165e-12)
 light_color = Color(0.996078, 1, 0.752941, 1)
 light_energy = 3.0
-light_volumetric_fog_energy = 8.0
+light_volumetric_fog_energy = 6.0
 spot_range = 23.9099
 spot_attenuation = 0.003
 spot_angle = 12.4198
