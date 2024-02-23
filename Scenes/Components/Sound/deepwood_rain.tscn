@@ -250,7 +250,7 @@ panning_strength = 0.0
 
 [node name="GPUParticles3D" type="GPUParticles3D" parent="."]
 transform = Transform3D(2.63423, 0, -3.72529e-08, 0, 2.43573, 0, 8.19564e-08, 0, 2.80003, -47.8699, 102.963, -53.5885)
-amount = 200000
+amount = 50000
 lifetime = 15.0
 speed_scale = 3.5
 randomness = 1.0

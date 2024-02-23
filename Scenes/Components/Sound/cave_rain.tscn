@@ -1,0 +1,82 @@
+[gd_scene load_steps=9 format=3 uid="uid://cxqd8awrokneb"]
+
+[ext_resource type="AudioStream" uid="uid://b7xfhbhhm0uia" path="res://Scenes/Components/Sound/Ext Rain.ogg" id="1_a37ei"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_jp852"]
+emission_shape_offset = Vector3(10, 0, 0)
+emission_shape = 3
+emission_box_extents = Vector3(20, 0, 20)
+angular_velocity_max = 190.84
+turbulence_enabled = true
+turbulence_noise_scale = 0.2
+
+[sub_resource type="Curve" id="Curve_rjuom"]
+max_value = 0.3
+_data = [Vector2(0, 0), 0.0, 1.2992, 0, 0, Vector2(0.258824, 0.237363), 0.183751, 0.183751, 0, 0, Vector2(0.758824, 0.171429), -0.510989, 0.0, 0, 0, Vector2(1, 0.181319), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o7r7j"]
+transparency = 1
+cull_mode = 2
+shading_mode = 0
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.380392, 0.529412, 0.392157, 0.509804)
+
+[sub_resource type="RibbonTrailMesh" id="RibbonTrailMesh_m2jn0"]
+material = SubResource("StandardMaterial3D_o7r7j")
+shape = 0
+size = 0.1
+sections = 10
+section_length = 0.05
+curve = SubResource("Curve_rjuom")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_puvlk"]
+emission_shape = 3
+emission_box_extents = Vector3(10, 0, 10)
+collision_mode = 1
+collision_friction = 0.0
+collision_bounce = 0.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wai1c"]
+transparency = 1
+cull_mode = 2
+shading_mode = 0
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.411765, 0.509804, 0.486275, 0.156863)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_fxahd"]
+material = SubResource("StandardMaterial3D_wai1c")
+size = Vector2(0.1, 0.1)
+
+[node name="Rain" type="Node3D"]
+
+[node name="Ext Rain" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.1226, 5.0248, -1.58651)
+stream = ExtResource("1_a37ei")
+autoplay = true
+max_distance = 60.0
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
+transform = Transform3D(2.63423, 0, 0, 0, 2.43573, 0, 0, 0, 2.80003, 44.7215, 32.9631, 0.880168)
+amount = 500
+lifetime = 4.7
+speed_scale = 3.5
+randomness = 1.0
+visibility_aabb = AABB(-35.466, -14.73, -11.26, 37.682, 8, 22.521)
+trail_enabled = true
+process_material = SubResource("ParticleProcessMaterial_jp852")
+draw_pass_1 = SubResource("RibbonTrailMesh_m2jn0")
+
+[node name="GPUParticlesCollisionBox3D2" type="GPUParticlesCollisionBox3D" parent="."]
+transform = Transform3D(0.985088, 0.172049, 0, -0.172049, 0.985088, 0, 0, 0, 1, 26.5819, -1.64066, 0.989044)
+size = Vector3(25.2538, 2, 22.0198)
+
+[node name="Splash" type="GPUParticles3D" parent="."]
+transform = Transform3D(0.980587, 0.196084, 0, -0.196084, 0.980587, 0, 0, 0, 1, 25.1132, -0.301087, 1.11018)
+amount = 500
+lifetime = 0.3
+speed_scale = 1.6
+randomness = 1.0
+visibility_aabb = AABB(-4, -0.169935, -4, 8, 0.33987, 8)
+process_material = SubResource("ParticleProcessMaterial_puvlk")
+draw_pass_1 = SubResource("PlaneMesh_fxahd")
