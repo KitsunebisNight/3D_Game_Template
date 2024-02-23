@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="BiB//D:_R PPoC 3D"
-run/main_scene="res://Scenes/Level1.tscn"
+run/main_scene="res://Scenes/Levels/level_1.tscn"
 config/features=PackedStringArray("4.2")
 boot_splash/bg_color=Color(0.176471, 0.00392157, 0, 1)
 boot_splash/image="res://Splashscreen.png"

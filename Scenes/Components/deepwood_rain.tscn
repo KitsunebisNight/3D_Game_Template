@@ -1,0 +1,260 @@
+[gd_scene load_steps=6 format=3 uid="uid://cqk274mrrhdxh"]
+
+[ext_resource type="AudioStream" uid="uid://b7xfhbhhm0uia" path="res://Scenes/Components/Sound/Ext Rain.ogg" id="1_f8vax"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_jp852"]
+emission_shape = 3
+emission_box_extents = Vector3(165, 0, 200)
+angular_velocity_max = 190.84
+turbulence_enabled = true
+turbulence_noise_scale = 0.2
+
+[sub_resource type="Curve" id="Curve_rjuom"]
+max_value = 0.3
+_data = [Vector2(0, 0), 0.0, 1.2992, 0, 0, Vector2(0.258824, 0.237363), 0.183751, 0.183751, 0, 0, Vector2(0.758824, 0.171429), -0.510989, 0.0, 0, 0, Vector2(1, 0.181319), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o7r7j"]
+transparency = 1
+cull_mode = 2
+shading_mode = 0
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.254902, 0.364706, 0.262745, 0.545098)
+
+[sub_resource type="RibbonTrailMesh" id="RibbonTrailMesh_m2jn0"]
+material = SubResource("StandardMaterial3D_o7r7j")
+shape = 0
+size = 0.1
+sections = 10
+section_length = 0.05
+curve = SubResource("Curve_rjuom")
+
+[node name="Deepwood Rain" type="Node3D"]
+transform = Transform3D(0.0264561, 0, -0.99965, 0, 1, 0, 0.99965, 0, 0.0264561, -244.178, -18.6399, 1010.42)
+
+[node name="Ext Rain6" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(0.0889634, 0, -0.996035, 0, 1, 0, 0.996035, 0, 0.0889634, 239.433, 35.3991, 63.8148)
+stream = ExtResource("1_f8vax")
+attenuation_model = 3
+autoplay = true
+max_distance = 200.0
+panning_strength = 0.0
+
+[node name="Ext Rain27" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(-0.122286, 0, -0.992495, 0, 1, 0, 0.992495, 0, -0.122286, 215.967, 37.1704, 177.144)
+stream = ExtResource("1_f8vax")
+attenuation_model = 3
+autoplay = true
+max_distance = 200.0
+panning_strength = 0.0
+
+[node name="Ext Rain26" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(-0.328076, 0, -0.944651, 0, 1, 0, 0.944651, 0, -0.328076, 141.019, 47.9417, 252.258)
+stream = ExtResource("1_f8vax")
+attenuation_model = 3
+autoplay = true
+max_distance = 200.0
+panning_strength = 0.0
+
+[node name="Ext Rain25" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(-0.519221, 0, -0.85464, 0, 1, 0, 0.85464, 0, -0.519221, 58.6205, 41.713, 285.116)
+stream = ExtResource("1_f8vax")
+attenuation_model = 3
+autoplay = true
+max_distance = 200.0
+panning_strength = 0.0
+
+[node name="Ext Rain24" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(-0.687189, 0, -0.726478, 0, 1, 0, 0.726478, 0, -0.687189, -16.0637, 49.4843, 346.283)
+stream = ExtResource("1_f8vax")
+attenuation_model = 3
+autoplay = true
+max_distance = 200.0
+panning_strength = 0.0
+
+[node name="Ext Rain23" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(-0.824482, 0, -0.565888, 0, 1, 0, 0.565888, 0, -0.824482, -44.5585, 42.2556, 225.854)
+stream = ExtResource("1_f8vax")
+attenuation_model = 3
+autoplay = true
+max_distance = 200.0
+panning_strength = 0.0
+
+[node name="Ext Rain22" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(-0.924972, 0, -0.380037, 0, 1, 0, 0.380037, 0, -0.924972, -133.771, 43.0269, 276.895)
+stream = ExtResource("1_f8vax")
+attenuation_model = 3
+autoplay = true
+max_distance = 200.0
+panning_strength = 0.0
+
+[node name="Ext Rain21" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(-0.984171, 0, -0.177221, 0, 1, 0, 0.177221, 0, -0.984171, -138.307, 38.7982, 180.481)
+stream = ExtResource("1_f8vax")
+attenuation_model = 3
+autoplay = true
+max_distance = 200.0
+panning_strength = 0.0
+
+[node name="Ext Rain20" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(-0.999439, 0, 0.0335047, 0, 1, 0, -0.0335047, 0, -0.999439, -194.223, 30.5695, 74.3638)
+stream = ExtResource("1_f8vax")
+attenuation_model = 3
+autoplay = true
+max_distance = 200.0
+panning_strength = 0.0
+
+[node name="Ext Rain19" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(-0.970093, 0, 0.242735, 0, 1, 0, -0.242735, 0, -0.970093, -102.856, 40.3408, 8.15829)
+stream = ExtResource("1_f8vax")
+attenuation_model = 3
+autoplay = true
+max_distance = 200.0
+panning_strength = 0.0
+
+[node name="Ext Rain18" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(-0.897443, 0, 0.44113, 0, 1, 0, -0.44113, 0, -0.897443, -15.6514, 36.1121, 39.2288)
+stream = ExtResource("1_f8vax")
+attenuation_model = 3
+autoplay = true
+max_distance = 200.0
+panning_strength = 0.0
+
+[node name="Ext Rain17" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(-0.784733, 0, 0.619834, 0, 1, 0, -0.619834, 0, -0.784733, 90.7895, 60.8833, 23.6378)
+stream = ExtResource("1_f8vax")
+attenuation_model = 3
+autoplay = true
+max_distance = 200.0
+panning_strength = 0.0
+
+[node name="Ext Rain16" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(-0.636993, 0, 0.77087, 0, 1, 0, -0.77087, 0, -0.636993, 161.028, 63.6545, -79.2625)
+stream = ExtResource("1_f8vax")
+attenuation_model = 3
+autoplay = true
+max_distance = 200.0
+panning_strength = 0.0
+
+[node name="Ext Rain15" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(-0.460819, 0, 0.887494, 0, 1, 0, -0.887494, 0, -0.460819, 181.304, 35.4258, -430.054)
+stream = ExtResource("1_f8vax")
+attenuation_model = 3
+autoplay = true
+max_distance = 200.0
+panning_strength = 0.0
+
+[node name="Ext Rain14" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(-0.264074, 0, 0.964502, 0, 1, 0, -0.964502, 0, -0.264074, 110.947, 37.197, -321.936)
+stream = ExtResource("1_f8vax")
+attenuation_model = 3
+autoplay = true
+max_distance = 200.0
+panning_strength = 0.0
+
+[node name="Ext Rain13" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(-0.0555418, 0, 0.998456, 0, 1, 0, -0.998456, 0, -0.0555418, -272.834, 40.9683, -148.716)
+stream = ExtResource("1_f8vax")
+attenuation_model = 3
+autoplay = true
+max_distance = 200.0
+panning_strength = 0.0
+
+[node name="Ext Rain12" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(0.15547, 0, 0.987841, 0, 1, 0, -0.987841, 0, 0.15547, 26.7075, 23.7395, -56.1782)
+stream = ExtResource("1_f8vax")
+attenuation_model = 3
+autoplay = true
+max_distance = 200.0
+panning_strength = 0.0
+
+[node name="Ext Rain8" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(0.490295, 0, -0.871556, 0, 1, 0, 0.871557, 0, 0.490295, 290.855, 18.8565, -179.869)
+stream = ExtResource("1_f8vax")
+attenuation_model = 3
+autoplay = true
+max_distance = 200.0
+panning_strength = 0.0
+
+[node name="Ext Rain7" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(0.662463, 0, -0.749095, 0, 1, 0, 0.749095, 0, 0.662463, 279.865, 23.0852, -450.293)
+stream = ExtResource("1_f8vax")
+attenuation_model = 3
+autoplay = true
+max_distance = 200.0
+panning_strength = 0.0
+
+[node name="Ext Rain10" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(0.805059, 0, -0.593194, 0, 1, 0, 0.593194, 0, 0.805059, 249.665, 30.3139, -333.778)
+stream = ExtResource("1_f8vax")
+attenuation_model = 3
+autoplay = true
+max_distance = 200.0
+panning_strength = 0.0
+
+[node name="Ext Rain11" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(0.911719, 0, -0.410815, 0, 1, 0, 0.410815, 0, 0.911719, 183.193, 25.5426, -242.706)
+stream = ExtResource("1_f8vax")
+attenuation_model = 3
+autoplay = true
+max_distance = 200.0
+panning_strength = 0.0
+
+[node name="Ext Rain28" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(0.977681, 0, -0.210097, 0, 1, 0, 0.210097, 0, 0.977681, 88.4445, 17.7713, -167.167)
+stream = ExtResource("1_f8vax")
+attenuation_model = 3
+autoplay = true
+max_distance = 200.0
+panning_strength = 0.0
+
+[node name="Ext Rain4" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(0.994405, 0, -0.105639, 0, 1, 0, 0.105639, 0, 0.994405, -37.7155, 33.8857, -137.969)
+stream = ExtResource("1_f8vax")
+attenuation_model = 3
+autoplay = true
+max_distance = 200.0
+panning_strength = 0.0
+
+[node name="Ext Rain5" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(-0.0792943, 0, -0.996851, 0, 1, 0, 0.996851, 0, -0.0792943, -134.622, 38.9143, -96.3532)
+stream = ExtResource("1_f8vax")
+attenuation_model = 3
+autoplay = true
+max_distance = 200.0
+panning_strength = 0.0
+
+[node name="Ext Rain3" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(-0.9986, 0, 0.0528937, 0, 1, 0, -0.0528937, 0, -0.9986, -243.168, 33.9428, -23.9531)
+stream = ExtResource("1_f8vax")
+attenuation_model = 3
+autoplay = true
+max_distance = 200.0
+panning_strength = 0.0
+
+[node name="Ext Rain2" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(0.0264561, 0, 0.99965, 0, 1, 0, -0.99965, 0, 0.0264561, -384.409, 19.9714, -13.0954)
+stream = ExtResource("1_f8vax")
+attenuation_model = 3
+autoplay = true
+max_distance = 200.0
+panning_strength = 0.0
+
+[node name="Ext Rain9" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(0.296241, 0, -0.955113, 0, 1, 0, 0.955113, 0, 0.296241, 268.667, 20.6278, -59.5902)
+stream = ExtResource("1_f8vax")
+attenuation_model = 3
+autoplay = true
+max_distance = 200.0
+panning_strength = 0.0
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
+transform = Transform3D(2.63423, 0, -3.72529e-08, 0, 2.43573, 0, 8.19564e-08, 0, 2.80003, -47.8699, 102.963, -53.5885)
+amount = 50000
+lifetime = 15.0
+speed_scale = 3.5
+randomness = 1.0
+visibility_aabb = AABB(-171, -54.325, -187, 342, 50, 374)
+trail_enabled = true
+process_material = SubResource("ParticleProcessMaterial_jp852")
+draw_pass_1 = SubResource("RibbonTrailMesh_m2jn0")
