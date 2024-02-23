@@ -24,5 +24,4 @@ volumetric_fog_length = 30.0
 volumetric_fog_ambient_inject = 0.4
 volumetric_fog_sky_affect = 0.8
 volumetric_fog_temporal_reprojection_enabled = false
-adjustment_enabled = true
 adjustment_saturation = 1.2

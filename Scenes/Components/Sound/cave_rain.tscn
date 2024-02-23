@@ -25,7 +25,7 @@ albedo_color = Color(0.380392, 0.529412, 0.392157, 0.509804)
 [sub_resource type="RibbonTrailMesh" id="RibbonTrailMesh_m2jn0"]
 material = SubResource("StandardMaterial3D_o7r7j")
 shape = 0
-size = 0.1
+size = 0.15
 sections = 10
 section_length = 0.05
 curve = SubResource("Curve_rjuom")
