@@ -11,6 +11,7 @@ class_name Player extends CharacterBody3D
 
 var jumping: bool = false
 var mouse_captured: bool = false
+var flashlight_on: bool = true
 
 var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
 
@@ -20,9 +21,13 @@ var look_dir: Vector2 # Input direction for look/aim
 var walk_vel: Vector3 # Walking velocity 
 var grav_vel: Vector3 # Gravity velocity 
 var jump_vel: Vector3 # Jumping velocity
+var sprint_speed: float = speed * 2
+var original_speed: float = speed
 
 @onready var camera: Camera3D = $Camera
 @onready var anim_play = $Camera/AnimationPlayer
+@onready var flashlight: MeshInstance3D = $Camera/Flashlight
+@onready var anim_play_flashlight = $Camera/Flashlight/AnimationPlayer
 
 func _ready() -> void:
 	capture_mouse()
@@ -31,6 +36,14 @@ func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:
 		look_dir = event.relative * 0.001
 		if mouse_captured: _rotate_camera()
+	if Input.is_action_pressed("sprint"):
+		speed = sprint_speed
+	else:
+		speed = original_speed
+	if Input.is_action_just_pressed("Flashlight"):
+		flashlight_on = !flashlight_on
+		$Camera/Flashlight/SpotLight3D.visible = flashlight_on
+		$LightToggle.play()
 	if Input.is_action_just_pressed("jump"): jumping = true
 	if Input.is_action_just_pressed("exit"): get_tree().quit()
 
@@ -40,6 +53,8 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 	if move_dir != Vector2():
 		anim_play.play("Walk")
+		anim_play_flashlight.play("Walk")
+		
 
 func capture_mouse() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)

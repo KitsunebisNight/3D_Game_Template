@@ -1,10 +1,52 @@
-[gd_scene load_steps=6 format=3 uid="uid://b0q0bnia378s4"]
+[gd_scene load_steps=14 format=3 uid="uid://b0q0bnia378s4"]
 
 [ext_resource type="Script" path="res://Scripts/FirstPersonController.gd" id="1_qtton"]
+[ext_resource type="ArrayMesh" uid="uid://skwupi4ja703" path="res://Scenes/Components/Models/Prop/Flashlight.obj" id="2_mikly"]
+[ext_resource type="Texture2D" uid="uid://caprulyor4kbv" path="res://Scenes/Components/Image/t_flashlightpattern.png" id="3_p7lnc"]
+[ext_resource type="AudioStream" uid="uid://chcjstfqroj5c" path="res://Scenes/Components/Sound/Flashlight Toggle.wav" id="4_r2s7q"]
+[ext_resource type="AudioStream" uid="uid://bf8lw1dojr5vw" path="res://Scenes/Components/Sound/Footsteps.ogg" id="5_7caed"]
+[ext_resource type="AudioStream" uid="uid://bhxhwb5oiwxmw" path="res://Scenes/Components/Sound/Rin Breathing.ogg" id="6_c0228"]
 
 [sub_resource type="CapsuleShape3D" id="2"]
 radius = 0.579249
 height = 2.34864
+
+[sub_resource type="Animation" id="Animation_763wf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("..:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.279108, -0.344495, -0.713936)]
+}
+
+[sub_resource type="Animation" id="Animation_weotg"]
+resource_name = "Walk"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("..:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.279108, -0.344495, -0.713936), Vector3(-0.305764, -0.374423, -0.71033), Vector3(-0.279108, -0.344495, -0.713936), Vector3(-0.305764, -0.374423, -0.71033), Vector3(-0.279108, -0.344495, -0.713936)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_d85ap"]
+_data = {
+"RESET": SubResource("Animation_763wf"),
+"Walk": SubResource("Animation_weotg")
+}
 
 [sub_resource type="Animation" id="Animation_wce3o"]
 length = 0.001
@@ -64,7 +106,7 @@ tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "handle_modes": PackedInt32Array(0, 0, 0, 0, 0),
-"points": PackedFloat32Array(1.1, -0.25, 0, 0.25, 0, 1.292, -0.25, 0, 0.25, 0, 1.1, -0.25, 0, 0.25, 0, 1.292, -0.25, 0, 0.25, 0, 1.1, -0.25, 0, 0.25, 0),
+"points": PackedFloat32Array(1.1, -0.25, 0, 0.25, 0, 1.25651, -0.25, 0, 0.25, 0, 1.1, -0.25, 0, 0.25, 0, 1.257, -0.25, 0, 0.25, 0, 1.1, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0, 0.5, 1, 1.5, 2)
 }
 tracks/2/type = "bezier"
@@ -96,26 +138,45 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 1.08181, 0)
 fov = 60.0
 far = 1000.0
 
+[node name="Flashlight" type="MeshInstance3D" parent="Camera"]
+transform = Transform3D(1, 0, 0, 0, -0.992818, -0.119634, 0, 0.119634, -0.992818, -0.279108, -0.344495, -0.713936)
+mesh = ExtResource("2_mikly")
+skeleton = NodePath("../..")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Camera/Flashlight"]
+root_node = NodePath("../SpotLight3D")
+libraries = {
+"": SubResource("AnimationLibrary_d85ap")
+}
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Camera/Flashlight"]
+transform = Transform3D(1, 0, 0, 0, -0.999859, 0.0168242, 0, -0.0168242, -0.999859, 0.000506848, -0.00147104, 0.221772)
+light_color = Color(0.996078, 1, 0.729412, 1)
+light_energy = 2.5
+light_volumetric_fog_energy = 0.5
+light_projector = ExtResource("3_p7lnc")
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 25.0
+distance_fade_length = 15.0
+spot_range = 40.0
+spot_attenuation = 0.003
+spot_angle = 14.0
+spot_angle_attenuation = 6.0
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Camera"]
 libraries = {
 "": SubResource("AnimationLibrary_c10pu")
 }
 speed_scale = 1.5
 
-[node name="SpotLight3D" type="SpotLight3D" parent="Camera"]
-transform = Transform3D(1, 0, 0, 0, 0.99469, 0.102914, 0, -0.102914, 0.99469, -0.220847, -0.87938, -2.08165e-12)
-light_color = Color(0.996078, 1, 0.752941, 1)
-light_energy = 3.0
-light_volumetric_fog_energy = 6.0
-spot_range = 23.9099
-spot_attenuation = 0.003
-spot_angle = 12.4198
-spot_angle_attenuation = 33.1
+[node name="LightToggle" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_r2s7q")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Camera/SpotLight3D"]
+[node name="Footsteps" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_7caed")
 
-[node name="Footsteps" type="Node3D" parent="."]
-
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Footsteps"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.586383, 0)
-max_distance = 6.0
+[node name="Breathing" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_c0228")
+volume_db = 15.0
+autoplay = true

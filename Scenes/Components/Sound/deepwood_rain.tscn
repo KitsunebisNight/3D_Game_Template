@@ -14,15 +14,15 @@ max_value = 0.3
 _data = [Vector2(0, 0), 0.0, 1.2992, 0, 0, Vector2(0.258824, 0.237363), 0.183751, 0.183751, 0, 0, Vector2(0.758824, 0.171429), -0.510989, 0.0, 0, 0, Vector2(1, 0.181319), 0.0, 0.0, 0, 0]
 point_count = 4
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o7r7j"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_la8e7"]
 transparency = 1
 cull_mode = 2
 shading_mode = 0
 vertex_color_use_as_albedo = true
-albedo_color = Color(0.254902, 0.364706, 0.262745, 0.545098)
+albedo_color = Color(0.192157, 0.270588, 0.211765, 0.368627)
 
-[sub_resource type="RibbonTrailMesh" id="RibbonTrailMesh_m2jn0"]
-material = SubResource("StandardMaterial3D_o7r7j")
+[sub_resource type="RibbonTrailMesh" id="RibbonTrailMesh_cpwtr"]
+material = SubResource("StandardMaterial3D_la8e7")
 shape = 0
 size = 0.15
 sections = 10
@@ -250,11 +250,13 @@ panning_strength = 0.0
 
 [node name="GPUParticles3D" type="GPUParticles3D" parent="."]
 transform = Transform3D(2.63423, 0, -3.72529e-08, 0, 2.43573, 0, 8.19564e-08, 0, 2.80003, -47.8699, 102.963, -53.5885)
-amount = 50000
+visibility_range_begin = 0.5
+visibility_range_end = 500.0
+amount = 30000
 lifetime = 15.0
-speed_scale = 3.5
+speed_scale = 4.2
 randomness = 1.0
 visibility_aabb = AABB(-171, -54.325, -187, 342, 50, 374)
 trail_enabled = true
 process_material = SubResource("ParticleProcessMaterial_jp852")
-draw_pass_1 = SubResource("RibbonTrailMesh_m2jn0")
+draw_pass_1 = SubResource("RibbonTrailMesh_cpwtr")
