@@ -28,6 +28,8 @@ var original_speed: float = speed
 @onready var anim_play = $Camera/AnimationPlayer
 @onready var flashlight: MeshInstance3D = $Camera/Flashlight
 @onready var anim_play_flashlight = $Camera/Flashlight/AnimationPlayer
+@onready var weapon: Node3D = $Camera/Flamethrower
+@onready var anim_play_walkwep = $Camera/Flamethrower/AnimationPlayer
 
 func _ready() -> void:
 	capture_mouse()
@@ -54,6 +56,7 @@ func _physics_process(delta: float) -> void:
 	if move_dir != Vector2():
 		anim_play.play("Walk")
 		anim_play_flashlight.play("Walk")
+		anim_play_walkwep.play("Walk")
 		
 
 func capture_mouse() -> void:

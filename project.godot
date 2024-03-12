@@ -22,6 +22,10 @@ boot_splash/size/viewport_height=720
 boot_splash/size/viewport_width=1280
 boot_splash/size/mode=2
 
+[autoload]
+
+Global="*res://Scripts/Global.gd"
+
 [display]
 
 window/size/viewport_width=1280
@@ -103,6 +107,12 @@ look_down={
 "deadzone": 0.5,
 "events": []
 }
+
+[layer_names]
+
+3d_physics/layer_1="Player"
+3d_physics/layer_2="Platforms"
+3d_physics/layer_3="Collectibles"
 
 [physics]
 

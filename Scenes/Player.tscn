@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://b0q0bnia378s4"]
+[gd_scene load_steps=18 format=3 uid="uid://b0q0bnia378s4"]
 
 [ext_resource type="Script" path="res://Scripts/FirstPersonController.gd" id="1_qtton"]
 [ext_resource type="ArrayMesh" uid="uid://skwupi4ja703" path="res://Scenes/Components/Models/Prop/Flashlight.obj" id="2_mikly"]
@@ -6,6 +6,7 @@
 [ext_resource type="AudioStream" uid="uid://chcjstfqroj5c" path="res://Scenes/Components/Sound/Flashlight Toggle.wav" id="4_r2s7q"]
 [ext_resource type="AudioStream" uid="uid://bf8lw1dojr5vw" path="res://Scenes/Components/Sound/Footsteps.ogg" id="5_7caed"]
 [ext_resource type="AudioStream" uid="uid://bhxhwb5oiwxmw" path="res://Scenes/Components/Sound/Rin Breathing.ogg" id="6_c0228"]
+[ext_resource type="PackedScene" uid="uid://w1vc1nfdpryu" path="res://Scenes/Components/Models/Prop/Flamethrower.gltf" id="7_1vjga"]
 
 [sub_resource type="CapsuleShape3D" id="2"]
 radius = 0.579249
@@ -46,6 +47,67 @@ tracks/0/keys = {
 _data = {
 "RESET": SubResource("Animation_763wf"),
 "Walk": SubResource("Animation_weotg")
+}
+
+[sub_resource type="Animation" id="Animation_fw45g"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.279583, 1.25699, -0.908286)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.0176819, 0.0422087, -0.000746733)]
+}
+
+[sub_resource type="Animation" id="Animation_kcqty"]
+resource_name = "Walk"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.0741644, -0.335137, -0.871614), Vector3(-0.103936, -0.326397, -0.871614), Vector3(-0.0741644, -0.335137, -0.871614), Vector3(-0.103936, -0.326397, -0.871614), Vector3(-0.0741644, -0.335137, -0.871614)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.166537, 0.55669, -0.111741), Vector3(-0.230107, 0.570429, -0.15187), Vector3(-0.166537, 0.55669, -0.111741), Vector3(-0.230107, 0.570429, -0.15187), Vector3(-0.166537, 0.55669, -0.111741)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_71glv"]
+_data = {
+"RESET": SubResource("Animation_fw45g"),
+"Walk": SubResource("Animation_kcqty")
 }
 
 [sub_resource type="Animation" id="Animation_wce3o"]
@@ -95,7 +157,7 @@ tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "handle_modes": PackedInt32Array(0, 0, 0, 0, 0),
-"points": PackedFloat32Array(2.08165e-12, -0.25, 0, 0.25, 0, 0.075, -0.25, 0, 0.25, 0, 0.175, -0.25, 0, 0.25, 0, 0.075, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0.075, -0.25, 0, 0.25, 0, 0.175, -0.25, 0, 0.25, 0, 0.075, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0, 0.5, 1, 1.5, 2)
 }
 tracks/1/type = "bezier"
@@ -106,7 +168,7 @@ tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "handle_modes": PackedInt32Array(0, 0, 0, 0, 0),
-"points": PackedFloat32Array(1.1, -0.25, 0, 0.25, 0, 1.25651, -0.25, 0, 0.25, 0, 1.1, -0.25, 0, 0.25, 0, 1.257, -0.25, 0, 0.25, 0, 1.1, -0.25, 0, 0.25, 0),
+"points": PackedFloat32Array(1.5, -0.25, 0, 0.25, 0, 1.675, -0.25, 0, 0.25, 0, 1.5, -0.25, 0, 0.25, 0, 1.675, -0.25, 0, 0.25, 0, 1.5, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0, 0.5, 1, 1.5, 2)
 }
 tracks/2/type = "bezier"
@@ -163,6 +225,14 @@ spot_range = 40.0
 spot_attenuation = 0.003
 spot_angle = 14.0
 spot_angle_attenuation = 6.0
+
+[node name="Flamethrower" parent="Camera" instance=ExtResource("7_1vjga")]
+transform = Transform3D(0.999109, -1.45519e-09, 0.0421896, -0.000746616, 0.999843, 0.017681, -0.0421829, -0.0176967, 0.998953, 0.279583, 1.25699, -0.908286)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Camera/Flamethrower"]
+libraries = {
+"": SubResource("AnimationLibrary_71glv")
+}
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Camera"]
 libraries = {
