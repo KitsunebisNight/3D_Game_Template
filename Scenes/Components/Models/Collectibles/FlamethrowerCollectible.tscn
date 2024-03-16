@@ -1,24 +1,29 @@
-[gd_scene load_steps=5 format=3 uid="uid://f4mg0ebtx5xw"]
+[gd_scene load_steps=6 format=3 uid="uid://f4mg0ebtx5xw"]
 
 [ext_resource type="Script" path="res://Scripts/collectible.gd" id="1_1a7i2"]
 [ext_resource type="PackedScene" uid="uid://w1vc1nfdpryu" path="res://Scenes/Components/Models/Prop/Flamethrower.gltf" id="2_4ffdt"]
 [ext_resource type="AudioStream" uid="uid://bokssr2jgrnhf" path="res://Scenes/Components/Sound/Flamethrower Pickup.ogg" id="3_mv2rj"]
+[ext_resource type="PackedScene" uid="uid://bq5qsuaiscmw5" path="res://Scenes/Components/Models/Prop/FlamethrowerPack.gltf" id="4_iyys3"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y6g7p"]
-size = Vector3(0.225085, 0.415447, 1.1046)
+size = Vector3(1.07696, 0.745321, 1.223)
 
 [node name="Collectible" type="Area3D"]
 collision_layer = 4
 script = ExtResource("1_1a7i2")
 
 [node name="Flamethrower" parent="." instance=ExtResource("2_4ffdt")]
+transform = Transform3D(-0.00234811, -0.940836, -0.338853, 0.999997, -0.00249576, 0, -0.000845696, -0.338852, 0.940839, 0, -0.082883, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.061193, -0.0405407, 0.0738907)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.256294, 0.124396, 0.0646387)
 shape = SubResource("BoxShape3D_y6g7p")
 
 [node name="Pickup" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_mv2rj")
 volume_db = 5.0
+
+[node name="FlamethrowerPack" parent="." instance=ExtResource("4_iyys3")]
+transform = Transform3D(0.464492, 0.801473, -0.376681, -0.178224, 0.50125, 0.84675, 0.867458, -0.326175, 0.375668, -0.274889, 0.111873, -0.158833)
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
