@@ -4,14 +4,14 @@ class_name Player extends CharacterBody3D
 
 @export_category("Player")
 
-@export_range(1, 35, 1) var speed: float = 10 # m/s
-@export_range(10, 400, 1) var acceleration: float = 100 # m/s^2
-@export_range(0.1, 3.0, 0.1) var jump_height: float = 1 # m
-@export_range(0.1, 3.0, 0.1, "or_greater") var camera_sens: float = 1
+@export_range(1, 35, 1) var speed: float = 6 # m/s
+@export_range(10, 400, 1) var acceleration: float = 60 # m/s^2
+@export_range(0.1, 3.0, 0.1) var jump_height: float = 2.3 # m
+@export_range(0.1, 3.0, 0.1, "or_greater") var camera_sens: float = 2.5
 
 var jumping: bool = false
 var mouse_captured: bool = false
-var flashlight_on: bool = true
+var flashlight_on: bool = false
 
 var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
 
@@ -21,7 +21,7 @@ var look_dir: Vector2 # Input direction for look/aim
 var walk_vel: Vector3 # Walking velocity 
 var grav_vel: Vector3 # Gravity velocity 
 var jump_vel: Vector3 # Jumping velocity
-var sprint_speed: float = speed * 2
+var sprint_speed: float = speed * 2.6
 var original_speed: float = speed
 
 @onready var camera: Camera3D = $Camera

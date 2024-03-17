@@ -1,0 +1,221 @@
+[gd_scene load_steps=2 format=3 uid="uid://6fwyh1c7foke"]
+
+[ext_resource type="AudioStream" uid="uid://mw12jwq2ajfe" path="res://Scenes/Components/Sound/Exterior Ambience.ogg" id="1_7585j"]
+
+[node name="Deepwoods Ambience" type="Node3D"]
+
+[node name="Ext Rain29" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(0.0889634, 0, -0.996035, 0, 1, 0, 0.996035, 0, 0.0889634, 239.433, 35.3991, 63.8148)
+stream = ExtResource("1_7585j")
+attenuation_model = 3
+autoplay = true
+max_distance = 200.0
+panning_strength = 0.0
+
+[node name="Ext Rain30" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(-0.122286, 0, -0.992495, 0, 1, 0, 0.992495, 0, -0.122286, 215.967, 37.1704, 177.144)
+stream = ExtResource("1_7585j")
+attenuation_model = 3
+autoplay = true
+max_distance = 200.0
+panning_strength = 0.0
+
+[node name="Ext Rain31" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(-0.328076, 0, -0.944651, 0, 1, 0, 0.944651, 0, -0.328076, 141.019, 47.9417, 252.258)
+stream = ExtResource("1_7585j")
+attenuation_model = 3
+autoplay = true
+max_distance = 200.0
+panning_strength = 0.0
+
+[node name="Ext Rain32" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(-0.519221, 0, -0.85464, 0, 1, 0, 0.85464, 0, -0.519221, 58.6205, 41.713, 285.116)
+stream = ExtResource("1_7585j")
+attenuation_model = 3
+autoplay = true
+max_distance = 200.0
+panning_strength = 0.0
+
+[node name="Ext Rain33" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(-0.687189, 0, -0.726478, 0, 1, 0, 0.726478, 0, -0.687189, -16.0637, 49.4843, 346.283)
+stream = ExtResource("1_7585j")
+attenuation_model = 3
+autoplay = true
+max_distance = 200.0
+panning_strength = 0.0
+
+[node name="Ext Rain34" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(-0.824482, 0, -0.565888, 0, 1, 0, 0.565888, 0, -0.824482, -44.5585, 42.2556, 225.854)
+stream = ExtResource("1_7585j")
+attenuation_model = 3
+autoplay = true
+max_distance = 200.0
+panning_strength = 0.0
+
+[node name="Ext Rain35" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(-0.924971, 0, -0.380037, 0, 1, 0, 0.380037, 0, -0.924971, -133.771, 43.0269, 276.895)
+stream = ExtResource("1_7585j")
+attenuation_model = 3
+autoplay = true
+max_distance = 200.0
+panning_strength = 0.0
+
+[node name="Ext Rain36" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(-0.984171, 0, -0.177221, 0, 1, 0, 0.177221, 0, -0.984171, -138.307, 38.7982, 180.481)
+stream = ExtResource("1_7585j")
+attenuation_model = 3
+autoplay = true
+max_distance = 200.0
+panning_strength = 0.0
+
+[node name="Ext Rain37" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(-0.999439, 0, 0.0335047, 0, 1, 0, -0.0335047, 0, -0.999439, -194.223, 30.5695, 74.3638)
+stream = ExtResource("1_7585j")
+attenuation_model = 3
+autoplay = true
+max_distance = 200.0
+panning_strength = 0.0
+
+[node name="Ext Rain38" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(-0.970093, 0, 0.242735, 0, 1, 0, -0.242735, 0, -0.970093, -102.856, 40.3408, 8.15829)
+stream = ExtResource("1_7585j")
+attenuation_model = 3
+autoplay = true
+max_distance = 200.0
+panning_strength = 0.0
+
+[node name="Ext Rain39" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(-0.897443, 0, 0.44113, 0, 1, 0, -0.44113, 0, -0.897443, -15.6514, 36.1121, 39.2288)
+stream = ExtResource("1_7585j")
+attenuation_model = 3
+autoplay = true
+max_distance = 200.0
+panning_strength = 0.0
+
+[node name="Ext Rain40" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(-0.784733, 0, 0.619834, 0, 1, 0, -0.619834, 0, -0.784733, 90.7895, 60.8833, 23.6378)
+stream = ExtResource("1_7585j")
+attenuation_model = 3
+autoplay = true
+max_distance = 200.0
+panning_strength = 0.0
+
+[node name="Ext Rain41" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(-0.636993, 0, 0.77087, 0, 1, 0, -0.77087, 0, -0.636993, 161.028, 63.6545, -79.2625)
+stream = ExtResource("1_7585j")
+attenuation_model = 3
+autoplay = true
+max_distance = 200.0
+panning_strength = 0.0
+
+[node name="Ext Rain42" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(-0.460819, 0, 0.887494, 0, 1, 0, -0.887494, 0, -0.460819, 181.304, 35.4258, -430.054)
+stream = ExtResource("1_7585j")
+attenuation_model = 3
+autoplay = true
+max_distance = 200.0
+panning_strength = 0.0
+
+[node name="Ext Rain43" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(-0.264074, 0, 0.964502, 0, 1, 0, -0.964502, 0, -0.264074, 110.947, 37.197, -321.936)
+stream = ExtResource("1_7585j")
+attenuation_model = 3
+autoplay = true
+max_distance = 200.0
+panning_strength = 0.0
+
+[node name="Ext Rain44" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(-0.0555418, 0, 0.998456, 0, 1, 0, -0.998456, 0, -0.0555418, -272.834, 40.9683, -148.716)
+stream = ExtResource("1_7585j")
+attenuation_model = 3
+autoplay = true
+max_distance = 200.0
+panning_strength = 0.0
+
+[node name="Ext Rain45" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(0.15547, 0, 0.987841, 0, 1, 0, -0.987841, 0, 0.15547, 26.7075, 23.7395, -56.1782)
+stream = ExtResource("1_7585j")
+attenuation_model = 3
+autoplay = true
+max_distance = 200.0
+panning_strength = 0.0
+
+[node name="Ext Rain46" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(0.490295, 0, -0.871557, 0, 1, 0, 0.871557, 0, 0.490295, 290.855, 18.8565, -179.869)
+stream = ExtResource("1_7585j")
+attenuation_model = 3
+autoplay = true
+max_distance = 200.0
+panning_strength = 0.0
+
+[node name="Ext Rain47" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(0.662463, 0, -0.749095, 0, 1, 0, 0.749095, 0, 0.662463, 279.865, 23.0852, -450.293)
+stream = ExtResource("1_7585j")
+attenuation_model = 3
+autoplay = true
+max_distance = 200.0
+panning_strength = 0.0
+
+[node name="Ext Rain48" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(0.805059, 0, -0.593194, 0, 1, 0, 0.593194, 0, 0.805059, 249.665, 30.3139, -333.778)
+stream = ExtResource("1_7585j")
+attenuation_model = 3
+autoplay = true
+max_distance = 200.0
+panning_strength = 0.0
+
+[node name="Ext Rain49" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(0.911719, 0, -0.410815, 0, 1, 0, 0.410815, 0, 0.911719, 183.193, 25.5426, -242.706)
+stream = ExtResource("1_7585j")
+attenuation_model = 3
+autoplay = true
+max_distance = 200.0
+panning_strength = 0.0
+
+[node name="Ext Rain50" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(0.977681, 0, -0.210097, 0, 1, 0, 0.210097, 0, 0.977681, 88.4445, 17.7713, -167.167)
+stream = ExtResource("1_7585j")
+attenuation_model = 3
+autoplay = true
+max_distance = 200.0
+panning_strength = 0.0
+
+[node name="Ext Rain51" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(0.994405, 0, -0.105639, 0, 1, 0, 0.105639, 0, 0.994405, -37.7155, 33.8857, -137.969)
+stream = ExtResource("1_7585j")
+attenuation_model = 3
+autoplay = true
+max_distance = 200.0
+panning_strength = 0.0
+
+[node name="Ext Rain52" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(-0.0792943, 0, -0.996851, 0, 1, 0, 0.996851, 0, -0.0792943, -134.622, 38.9143, -96.3532)
+stream = ExtResource("1_7585j")
+attenuation_model = 3
+autoplay = true
+max_distance = 200.0
+panning_strength = 0.0
+
+[node name="Ext Rain53" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(-0.9986, 0, 0.0528937, 0, 1, 0, -0.0528937, 0, -0.9986, -243.168, 33.9428, -23.9531)
+stream = ExtResource("1_7585j")
+attenuation_model = 3
+autoplay = true
+max_distance = 200.0
+panning_strength = 0.0
+
+[node name="Ext Rain54" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(0.0264561, 0, 0.99965, 0, 1, 0, -0.99965, 0, 0.0264561, -384.409, 19.9714, -13.0954)
+stream = ExtResource("1_7585j")
+attenuation_model = 3
+autoplay = true
+max_distance = 200.0
+panning_strength = 0.0
+
+[node name="Ext Rain55" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(0.296241, 0, -0.955113, 0, 1, 0, 0.955113, 0, 0.296241, 268.667, 20.6278, -59.5902)
+stream = ExtResource("1_7585j")
+attenuation_model = 3
+autoplay = true
+max_distance = 200.0
+panning_strength = 0.0

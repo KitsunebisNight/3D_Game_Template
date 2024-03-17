@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cxqd8awrokneb"]
+[gd_scene load_steps=8 format=3 uid="uid://cxqd8awrokneb"]
 
 [ext_resource type="AudioStream" uid="uid://b7xfhbhhm0uia" path="res://Scenes/Components/Sound/Ext Rain.ogg" id="1_a37ei"]
 
@@ -17,10 +17,9 @@ point_count = 4
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o7r7j"]
 transparency = 1
-cull_mode = 1
 shading_mode = 0
 vertex_color_use_as_albedo = true
-albedo_color = Color(0.192157, 0.270588, 0.211765, 0.368627)
+albedo_color = Color(0.254902, 0.352941, 0.282353, 0.0666667)
 
 [sub_resource type="RibbonTrailMesh" id="RibbonTrailMesh_q7j8u"]
 material = SubResource("StandardMaterial3D_o7r7j")
@@ -37,16 +36,13 @@ collision_mode = 1
 collision_friction = 0.0
 collision_bounce = 0.0
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wai1c"]
-transparency = 1
-cull_mode = 2
-shading_mode = 0
-vertex_color_use_as_albedo = true
-albedo_color = Color(0.411765, 0.509804, 0.486275, 0.156863)
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_fxahd"]
-material = SubResource("StandardMaterial3D_wai1c")
-size = Vector2(0.1, 0.1)
+[sub_resource type="CylinderMesh" id="CylinderMesh_dfa7r"]
+material = SubResource("StandardMaterial3D_o7r7j")
+top_radius = 0.02
+bottom_radius = 0.03
+height = 0.001
+radial_segments = 24
+rings = 1
 
 [node name="Rain" type="Node3D"]
 
@@ -71,6 +67,10 @@ draw_pass_1 = SubResource("RibbonTrailMesh_q7j8u")
 transform = Transform3D(0.985088, 0.172049, 0, -0.172049, 0.985088, 0, 0, 0, 1, 26.5819, -1.64066, 0.989044)
 size = Vector3(25.2538, 2, 22.0198)
 
+[node name="GPUParticlesCollisionBox3D3" type="GPUParticlesCollisionBox3D" parent="."]
+transform = Transform3D(0.999855, 0.0169808, 0, -0.0169808, 0.999855, 0, 0, 0, 1, 46.9763, -4.02678, 0.989044)
+size = Vector3(25.2538, 2, 22.0198)
+
 [node name="Splash" type="GPUParticles3D" parent="."]
 transform = Transform3D(0.980587, 0.196084, 0, -0.196084, 0.980587, 0, 0, 0, 1, 25.1132, -0.301087, 1.11018)
 amount = 500
@@ -79,4 +79,14 @@ speed_scale = 1.6
 randomness = 1.0
 visibility_aabb = AABB(-4, -0.169935, -4, 8, 0.33987, 8)
 process_material = SubResource("ParticleProcessMaterial_puvlk")
-draw_pass_1 = SubResource("PlaneMesh_fxahd")
+draw_pass_1 = SubResource("CylinderMesh_dfa7r")
+
+[node name="Splash2" type="GPUParticles3D" parent="."]
+transform = Transform3D(0.999796, 0.020193, 0, -0.020193, 0.999796, 0, 0, 0, 1, 49.2267, -3.14247, 1.11018)
+amount = 500
+lifetime = 0.3
+speed_scale = 1.6
+randomness = 1.0
+visibility_aabb = AABB(-4, -0.169935, -4, 8, 0.33987, 8)
+process_material = SubResource("ParticleProcessMaterial_puvlk")
+draw_pass_1 = SubResource("CylinderMesh_dfa7r")

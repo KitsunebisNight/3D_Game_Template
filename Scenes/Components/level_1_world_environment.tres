@@ -14,6 +14,7 @@ background_mode = 2
 sky = SubResource("Sky_iqubb")
 sky_rotation = Vector3(0, -4.6164, 0)
 ambient_light_source = 3
+ambient_light_sky_contribution = 0.5
 reflected_light_source = 2
 tonemap_mode = 2
 ssao_enabled = true

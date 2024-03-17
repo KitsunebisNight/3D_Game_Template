@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://b0q0bnia378s4"]
+[gd_scene load_steps=19 format=3 uid="uid://b0q0bnia378s4"]
 
 [ext_resource type="Script" path="res://Scripts/FirstPersonController.gd" id="1_qtton"]
 [ext_resource type="ArrayMesh" uid="uid://skwupi4ja703" path="res://Scenes/Components/Models/Prop/Flashlight.obj" id="2_mikly"]
@@ -11,6 +11,12 @@
 [sub_resource type="CapsuleShape3D" id="2"]
 radius = 0.579249
 height = 2.34864
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_qk3vp"]
+auto_exposure_speed = 1.0
+dof_blur_far_enabled = true
+dof_blur_far_distance = 400.0
+dof_blur_far_transition = 100.0
 
 [sub_resource type="Animation" id="Animation_763wf"]
 length = 0.001
@@ -197,8 +203,8 @@ shape = SubResource("2")
 
 [node name="Camera" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 1.08181, 0)
+attributes = SubResource("CameraAttributesPractical_qk3vp")
 fov = 60.0
-far = 1000.0
 
 [node name="Flashlight" type="MeshInstance3D" parent="Camera"]
 transform = Transform3D(1, 0, 0, 0, -0.992818, -0.119634, 0, 0.119634, -0.992818, -0.279108, -0.344495, -0.713936)
@@ -212,22 +218,25 @@ libraries = {
 }
 
 [node name="SpotLight3D" type="SpotLight3D" parent="Camera/Flashlight"]
-transform = Transform3D(1, 0, 0, 0, -0.999859, 0.0168242, 0, -0.0168242, -0.999859, 0.000506848, -0.00147104, 0.221772)
+transform = Transform3D(1, 0, 0, 0, -0.998365, 0.0571633, 0, -0.0571633, -0.998365, -0.0254689, -0.0107877, 0.22007)
+visible = false
+light_intensity_lumens = 8000.0
 light_color = Color(0.996078, 1, 0.729412, 1)
-light_energy = 2.5
+light_energy = 6.0
 light_volumetric_fog_energy = 0.5
 light_projector = ExtResource("3_p7lnc")
 shadow_enabled = true
 distance_fade_enabled = true
 distance_fade_begin = 25.0
 distance_fade_length = 15.0
-spot_range = 40.0
+spot_range = 119.895
 spot_attenuation = 0.003
-spot_angle = 14.0
+spot_angle = 31.1627
 spot_angle_attenuation = 6.0
 
 [node name="Flamethrower" parent="Camera" instance=ExtResource("7_1vjga")]
 transform = Transform3D(0.999109, -1.45519e-09, 0.0421896, -0.000746616, 0.999843, 0.017681, -0.0421829, -0.0176967, 0.998953, 0.279583, 1.25699, -0.908286)
+visible = false
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Camera/Flamethrower"]
 libraries = {

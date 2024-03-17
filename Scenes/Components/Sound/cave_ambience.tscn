@@ -1,0 +1,150 @@
+[gd_scene load_steps=2 format=3 uid="uid://bg4omfua57q36"]
+
+[ext_resource type="AudioStream" uid="uid://cgjyy3hv5wdjf" path="res://Scenes/Components/Sound/Cavern Ambience.ogg" id="1_pgnyr"]
+
+[node name="Caves" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.205841, 0.14386, -0.184082)
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -305.125, -30.2847, 413.606)
+stream = ExtResource("1_pgnyr")
+volume_db = -6.0
+unit_size = 20.0
+autoplay = true
+max_distance = 200.0
+panning_strength = 0.0
+
+[node name="AudioStreamPlayer3D2" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -315.899, -30.2847, 379.376)
+stream = ExtResource("1_pgnyr")
+volume_db = -6.0
+unit_size = 20.0
+autoplay = true
+max_distance = 200.0
+panning_strength = 0.0
+
+[node name="AudioStreamPlayer3D4" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -345.556, -22.9035, 384.075)
+stream = ExtResource("1_pgnyr")
+volume_db = -6.0
+unit_size = 20.0
+autoplay = true
+max_distance = 200.0
+panning_strength = 0.0
+
+[node name="AudioStreamPlayer3D7" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -298.642, -26.933, 344.731)
+stream = ExtResource("1_pgnyr")
+volume_db = -6.0
+unit_size = 20.0
+autoplay = true
+max_distance = 200.0
+panning_strength = 0.0
+
+[node name="AudioStreamPlayer3D8" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -261.289, -19.5563, 327.56)
+stream = ExtResource("1_pgnyr")
+volume_db = -6.0
+unit_size = 20.0
+autoplay = true
+max_distance = 200.0
+panning_strength = 0.0
+
+[node name="AudioStreamPlayer3D9" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -231.645, -9.44093, 355.917)
+stream = ExtResource("1_pgnyr")
+volume_db = -6.0
+unit_size = 20.0
+autoplay = true
+max_distance = 200.0
+panning_strength = 0.0
+
+[node name="AudioStreamPlayer3D10" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -204.228, -6.98205, 374.183)
+stream = ExtResource("1_pgnyr")
+volume_db = -6.0
+unit_size = 20.0
+autoplay = true
+max_distance = 200.0
+panning_strength = 0.0
+
+[node name="AudioStreamPlayer3D11" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -187.141, -5.32088, 409.251)
+stream = ExtResource("1_pgnyr")
+volume_db = -6.0
+unit_size = 20.0
+autoplay = true
+max_distance = 200.0
+panning_strength = 0.0
+
+[node name="AudioStreamPlayer3D14" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -162.388, -12.8848, 361.251)
+stream = ExtResource("1_pgnyr")
+volume_db = -6.0
+unit_size = 20.0
+autoplay = true
+max_distance = 200.0
+panning_strength = 0.0
+
+[node name="AudioStreamPlayer3D15" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(0.830596, 0, 0.556876, 0, 1, 0, -0.556876, 0, 0.830596, -168.035, -30.5757, 311.285)
+stream = ExtResource("1_pgnyr")
+volume_db = -6.0
+unit_size = 20.0
+autoplay = true
+max_distance = 200.0
+panning_strength = 0.0
+
+[node name="AudioStreamPlayer3D16" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(0.830596, 0, 0.556876, 0, 1, 0, -0.556876, 0, 0.830596, -178.193, -44.1428, 289.758)
+stream = ExtResource("1_pgnyr")
+volume_db = -6.0
+unit_size = 20.0
+autoplay = true
+max_distance = 200.0
+panning_strength = 0.0
+
+[node name="AudioStreamPlayer3D13" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -229.515, -0.197927, 436.198)
+stream = ExtResource("1_pgnyr")
+volume_db = -6.0
+unit_size = 20.0
+autoplay = true
+max_distance = 200.0
+panning_strength = 0.0
+
+[node name="AudioStreamPlayer3D12" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -132.336, -0.191345, 398.276)
+stream = ExtResource("1_pgnyr")
+volume_db = -6.0
+unit_size = 20.0
+autoplay = true
+max_distance = 200.0
+panning_strength = 0.0
+
+[node name="AudioStreamPlayer3D6" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -300.839, -18.49, 436.088)
+stream = ExtResource("1_pgnyr")
+volume_db = -6.0
+unit_size = 20.0
+autoplay = true
+max_distance = 200.0
+panning_strength = 0.0
+
+[node name="AudioStreamPlayer3D3" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -265.959, -30.2847, 412.56)
+stream = ExtResource("1_pgnyr")
+volume_db = -6.0
+unit_size = 20.0
+autoplay = true
+max_distance = 200.0
+panning_strength = 0.0
+
+[node name="AudioStreamPlayer3D5" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -247.533, -30.2847, 376.735)
+stream = ExtResource("1_pgnyr")
+volume_db = -6.0
+unit_size = 20.0
+autoplay = true
+max_distance = 200.0
+panning_strength = 0.0
