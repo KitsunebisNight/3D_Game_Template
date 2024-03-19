@@ -231,7 +231,7 @@ distance_fade_begin = 25.0
 distance_fade_length = 15.0
 spot_range = 119.895
 spot_attenuation = 0.003
-spot_angle = 31.1627
+spot_angle = 31.2393
 spot_angle_attenuation = 6.0
 
 [node name="Flamethrower" parent="Camera" instance=ExtResource("7_1vjga")]
