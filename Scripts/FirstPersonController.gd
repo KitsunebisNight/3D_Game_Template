@@ -96,3 +96,7 @@ func _jump(delta: float) -> Vector3:
 		return jump_vel
 	jump_vel = Vector3.ZERO if is_on_floor() else jump_vel.move_toward(Vector3.ZERO, gravity * delta)
 	return jump_vel
+	
+func add_flamethrower():
+	$Camera/Flamethrower.visible = true
+	$Pickup.play()

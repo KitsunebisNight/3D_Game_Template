@@ -1,7 +1,7 @@
 [gd_resource type="ShaderMaterial" load_steps=7 format=3 uid="uid://c4mot1fo3siox"]
 
 [ext_resource type="Shader" path="res://addons/proton_scatter/demos/assets/materials/grass.gdshader" id="1_fntgl"]
-[ext_resource type="Texture2D" uid="uid://d23p13yi7asw0" path="res://addons/proton_scatter/demos/assets/textures/t_grass_2.png" id="2_1odx0"]
+[ext_resource type="Texture2D" uid="uid://cp3215cemo4hp" path="res://addons/proton_scatter/demos/assets/textures/t_grass_2.png" id="2_1odx0"]
 
 [sub_resource type="Gradient" id="Gradient_122hb"]
 offsets = PackedFloat32Array(0, 0.473451, 1)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://b0q0bnia378s4"]
+[gd_scene load_steps=20 format=3 uid="uid://b0q0bnia378s4"]
 
 [ext_resource type="Script" path="res://Scripts/FirstPersonController.gd" id="1_qtton"]
 [ext_resource type="ArrayMesh" uid="uid://b1bfhqtgvgj61" path="res://Scenes/Components/Models/Prop/Flashlight.obj" id="2_mikly"]
@@ -7,13 +7,14 @@
 [ext_resource type="AudioStream" uid="uid://qbqtcgo2kad" path="res://Scenes/Components/Sound/Footsteps.ogg" id="5_7caed"]
 [ext_resource type="AudioStream" uid="uid://b6r1hm2kwhobc" path="res://Scenes/Components/Sound/Rin Breathing.ogg" id="6_c0228"]
 [ext_resource type="PackedScene" uid="uid://3jvo81chn0m5" path="res://Scenes/Components/Models/Prop/Flamethrower.gltf" id="7_1vjga"]
+[ext_resource type="AudioStream" uid="uid://c7656dhlyhfoa" path="res://Scenes/Components/Sound/Flamethrower Pickup.ogg" id="8_8ptfq"]
 
 [sub_resource type="CapsuleShape3D" id="2"]
 radius = 0.579249
 height = 2.34864
 
 [sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_qk3vp"]
-exposure_sensitivity = 125.0
+exposure_sensitivity = 150.0
 auto_exposure_speed = 1.0
 dof_blur_far_enabled = true
 dof_blur_far_distance = 400.0
@@ -223,7 +224,7 @@ transform = Transform3D(1, 0, 0, 0, -0.998365, 0.0571633, 0, -0.0571633, -0.9983
 visible = false
 light_intensity_lumens = 8000.0
 light_color = Color(0.996078, 1, 0.729412, 1)
-light_energy = 10.0
+light_energy = 15.0
 light_volumetric_fog_energy = 0.5
 light_projector = ExtResource("3_p7lnc")
 shadow_enabled = true
@@ -232,7 +233,7 @@ distance_fade_begin = 25.0
 distance_fade_length = 15.0
 spot_range = 138.687
 spot_attenuation = 0.003
-spot_angle = 32.1677
+spot_angle = 34.0
 spot_angle_attenuation = 6.0
 
 [node name="Flamethrower" parent="Camera" instance=ExtResource("7_1vjga")]
@@ -260,3 +261,7 @@ stream = ExtResource("5_7caed")
 stream = ExtResource("6_c0228")
 volume_db = 15.0
 autoplay = true
+
+[node name="Pickup" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_8ptfq")
+volume_db = 5.0
