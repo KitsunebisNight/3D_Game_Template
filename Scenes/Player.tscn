@@ -14,7 +14,7 @@ radius = 0.579249
 height = 2.34864
 
 [sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_qk3vp"]
-exposure_sensitivity = 150.0
+exposure_sensitivity = 175.0
 auto_exposure_speed = 1.0
 dof_blur_far_enabled = true
 dof_blur_far_distance = 400.0
@@ -224,7 +224,7 @@ transform = Transform3D(1, 0, 0, 0, -0.998365, 0.0571633, 0, -0.0571633, -0.9983
 visible = false
 light_intensity_lumens = 8000.0
 light_color = Color(0.996078, 1, 0.729412, 1)
-light_energy = 15.0
+light_energy = 25.0
 light_volumetric_fog_energy = 0.5
 light_projector = ExtResource("3_p7lnc")
 shadow_enabled = true
