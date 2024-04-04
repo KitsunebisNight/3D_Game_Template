@@ -1,13 +1,13 @@
 [gd_scene load_steps=20 format=3 uid="uid://b0q0bnia378s4"]
 
 [ext_resource type="Script" path="res://Scripts/FirstPersonController.gd" id="1_qtton"]
-[ext_resource type="ArrayMesh" uid="uid://b1bfhqtgvgj61" path="res://Scenes/Components/Models/Prop/Flashlight.obj" id="2_mikly"]
-[ext_resource type="Texture2D" uid="uid://qyg5i3dhmcil" path="res://Scenes/Components/Image/t_flashlightpattern.png" id="3_p7lnc"]
-[ext_resource type="AudioStream" uid="uid://b75p2ril6yo2k" path="res://Scenes/Components/Sound/Flashlight Toggle.wav" id="4_r2s7q"]
-[ext_resource type="AudioStream" uid="uid://qbqtcgo2kad" path="res://Scenes/Components/Sound/Footsteps.ogg" id="5_7caed"]
-[ext_resource type="AudioStream" uid="uid://b6r1hm2kwhobc" path="res://Scenes/Components/Sound/Rin Breathing.ogg" id="6_c0228"]
-[ext_resource type="PackedScene" uid="uid://3jvo81chn0m5" path="res://Scenes/Components/Models/Prop/Flamethrower.gltf" id="7_1vjga"]
-[ext_resource type="AudioStream" uid="uid://c7656dhlyhfoa" path="res://Scenes/Components/Sound/Flamethrower Pickup.ogg" id="8_8ptfq"]
+[ext_resource type="ArrayMesh" uid="uid://skwupi4ja703" path="res://Scenes/Components/Models/Prop/Flashlight.obj" id="2_mikly"]
+[ext_resource type="Texture2D" uid="uid://caprulyor4kbv" path="res://Scenes/Components/Image/t_flashlightpattern.png" id="3_p7lnc"]
+[ext_resource type="AudioStream" uid="uid://chcjstfqroj5c" path="res://Scenes/Components/Sound/Flashlight Toggle.wav" id="4_r2s7q"]
+[ext_resource type="AudioStream" uid="uid://bf8lw1dojr5vw" path="res://Scenes/Components/Sound/Footsteps.ogg" id="5_7caed"]
+[ext_resource type="AudioStream" uid="uid://bhxhwb5oiwxmw" path="res://Scenes/Components/Sound/Rin Breathing.ogg" id="6_c0228"]
+[ext_resource type="PackedScene" uid="uid://w1vc1nfdpryu" path="res://Scenes/Components/Models/Prop/Flamethrower.gltf" id="7_1vjga"]
+[ext_resource type="AudioStream" uid="uid://bokssr2jgrnhf" path="res://Scenes/Components/Sound/Flamethrower Pickup.ogg" id="8_8ptfq"]
 
 [sub_resource type="CapsuleShape3D" id="2"]
 radius = 0.579249
