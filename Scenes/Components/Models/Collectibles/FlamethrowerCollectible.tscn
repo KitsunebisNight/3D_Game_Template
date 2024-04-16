@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://f4mg0ebtx5xw"]
 
-[ext_resource type="Script" path="res://Scripts/collectible.gd" id="1_1a7i2"]
+[ext_resource type="Script" path="res://Scripts/FlamethrowerCollectible.gd" id="1_1a7i2"]
 [ext_resource type="PackedScene" uid="uid://w1vc1nfdpryu" path="res://Scenes/Components/Models/Prop/Flamethrower.gltf" id="2_4ffdt"]
 [ext_resource type="PackedScene" uid="uid://bq5qsuaiscmw5" path="res://Scenes/Components/Models/Prop/FlamethrowerPack.gltf" id="4_iyys3"]
 
