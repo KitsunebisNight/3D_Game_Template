@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://s0m808j2f2fa"]
+
+[ext_resource type="Script" path="res://Scripts/portal.gd" id="1_nnhik"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_io7xn"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nqluf"]
+size = Vector3(7.7382, 8.16347, 5.09291)
+
+[node name="Exit to Deepwoods" type="Area3D"]
+script = ExtResource("1_nnhik")
+level_to_load = "res://Scenes/Levels/level_2.tscn"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+mesh = SubResource("PlaneMesh_io7xn")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0420625, -0.115176, 2.28889)
+shape = SubResource("BoxShape3D_nqluf")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

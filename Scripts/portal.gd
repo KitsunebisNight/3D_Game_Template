@@ -11,12 +11,10 @@ func _unhandled_input(_event):
 
 func _on_body_entered(_body):
 	player_entered = true
-	if not global.has_deepwoods_key:
-		emit_signal("update_console", "You need to find the deepwoods key")
-	elif global.mushroom_count < 10:
-		emit_signal("update_console", "You need 10 mushrooms to go to the next level")
+	if not Global.has_deepwoods_key:
+		emit_signal("update_console", "Get the key to the Deepwoods")
 	else:
-		emit_signal("update_console", "Press G to go to the next level")
+		emit_signal("update_console", "Press E to travel")
 
 func _on_body_exited(_body):
 	player_entered = false

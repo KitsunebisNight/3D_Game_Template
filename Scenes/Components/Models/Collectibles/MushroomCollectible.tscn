@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://c2cchcfx0pa4e"]
+
+[ext_resource type="Script" path="res://Scripts/Collectible.gd" id="1_6q21p"]
+[ext_resource type="PackedScene" uid="uid://cmsrhhk52at6a" path="res://Scenes/Components/Models/Prop/Mushroom 1.gltf" id="2_uhsto"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_y6g7p"]
+size = Vector3(0.584378, 0.745321, 0.451258)
+
+[node name="Collectible" type="Area3D"]
+collision_layer = 4
+script = ExtResource("1_6q21p")
+type = "mushroom"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0100032, 0.124396, -0.0193886)
+shape = SubResource("BoxShape3D_y6g7p")
+
+[node name="Mushroom 1" parent="." instance=ExtResource("2_uhsto")]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

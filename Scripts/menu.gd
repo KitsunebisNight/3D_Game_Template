@@ -12,4 +12,4 @@ func _on_quit_pressed():
 	get_tree().quit()
 
 func _on_check_button_toggled(toggled_on):
-	global.head_bob_activated = toggled_on
+	Global.head_bob_activated = toggled_on

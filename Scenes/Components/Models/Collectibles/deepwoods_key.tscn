@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://b62gxi7on25fo"]
+
+[ext_resource type="Script" path="res://Scripts/Collectible.gd" id="1_aivfh"]
+[ext_resource type="PackedScene" uid="uid://dvlwitwcq7584" path="res://Scenes/Components/Models/Prop/Deepwoods Key.gltf" id="2_bm470"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_eurot"]
+size = Vector3(1.50842, 3.2959, 1.63373)
+
+[node name="Deepwoods Key" type="Area3D"]
+script = ExtResource("1_aivfh")
+type = "deepwoods_key"
+
+[node name="Deepwoods Key" parent="." instance=ExtResource("2_bm470")]
+transform = Transform3D(0.73809, -0.672134, 0.0588042, 0, 0.0871558, 0.996195, -0.674702, -0.735282, 0.0643289, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.174744, -0.699707, 0.608368)
+shape = SubResource("BoxShape3D_eurot")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

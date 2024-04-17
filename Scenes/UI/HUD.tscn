@@ -1,0 +1,60 @@
+[gd_scene load_steps=6 format=3 uid="uid://cuyt2o7ss5rnh"]
+
+[ext_resource type="Script" path="res://Scripts/hud.gd" id="1_mumpp"]
+[ext_resource type="Texture2D" uid="uid://2fsf3aai8ic2" path="res://Scenes/Components/UI/Key Logo.png" id="1_wyf4c"]
+[ext_resource type="FontFile" uid="uid://bf16rgn4xashh" path="res://Scenes/Components/Fonts/AoyagiKouzanTOTF.otf" id="2_kgk5n"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ycg6g"]
+font = ExtResource("2_kgk5n")
+font_size = 42
+outline_size = 5
+
+[sub_resource type="LabelSettings" id="LabelSettings_low0v"]
+font = ExtResource("2_kgk5n")
+font_size = 40
+
+[node name="HUD" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mumpp")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -115.0
+offset_top = 9.0
+offset_right = -9.0
+offset_bottom = 147.0
+grow_horizontal = 0
+pivot_offset = Vector2(51, 58)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_wyf4c")
+
+[node name="Key" type="Label" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "0"
+label_settings = SubResource("LabelSettings_ycg6g")
+horizontal_alignment = 1
+
+[node name="CenterContainer2" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 25.0
+offset_bottom = 48.0
+grow_horizontal = 2
+
+[node name="Console" type="Label" parent="CenterContainer2"]
+layout_mode = 2
+label_settings = SubResource("LabelSettings_low0v")
