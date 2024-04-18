@@ -8,6 +8,7 @@
 size = Vector3(7.7382, 8.16347, 5.09291)
 
 [node name="Exit to Deepwoods" type="Area3D"]
+collision_layer = 32
 script = ExtResource("1_nnhik")
 level_to_load = "res://Scenes/Levels/level_2.tscn"
 

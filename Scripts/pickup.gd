@@ -1,6 +1,6 @@
 extends Area3D
 
-@onready var hand = $"../Hand"
+@onready var hand = $Hand
 @onready var camera = $".."
 
 var pull_speed = 2
@@ -33,7 +33,7 @@ func _physics_process(_delta):
 
 # detect user input
 func _unhandled_input(_event):
-	# if user hits "f" or pickup button
+	# if user hits pickup button
 	if Input.is_action_just_pressed("pickup"):
 		emit_signal("update_console", "")
 		# if object detected
@@ -65,7 +65,6 @@ func _unhandled_input(_event):
 		# remove object
 		pickup_object = null
 		is_picked = false
-		$"../../Throw".play()
 
 func _on_body_entered(body):
 	# first check if an object is picked up
