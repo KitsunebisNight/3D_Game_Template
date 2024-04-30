@@ -32,8 +32,8 @@ func _physics_process(delta):
 	
 	# enemy attacks player
 	if nav_agent.distance_to_target() < 2 and is_following_player:
-		global.mushroom_count = 0
-		global.has_deepwoods_key = false
+		Global.mushroom_count = 0
+		Global.has_deepwoods_key = false
 		get_tree().change_scene_to_file(game_over_scene)
 		return
 	

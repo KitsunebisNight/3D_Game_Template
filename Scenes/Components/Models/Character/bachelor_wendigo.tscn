@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://bpf1ca6l42cjp"]
+
+[ext_resource type="Script" path="res://Scripts/enemy.gd" id="1_a2dd7"]
+[ext_resource type="ArrayMesh" uid="uid://bbqba1sumdxkf" path="res://Scenes/Components/Models/Character/Bachelor 3D Basemesh.obj" id="2_3hlqq"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hjrlo"]
+size = Vector3(2.10745, 3.95047, 1.33289)
+
+[node name="Bachelor Wendigo" type="CharacterBody3D" groups=["enemies"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.93058, 0)
+collision_layer = 64
+collision_mask = 3
+floor_stop_on_slope = false
+floor_snap_length = 0.25
+script = ExtResource("1_a2dd7")
+speed = 5
+game_over_scene = "res://Scenes/UI/Menus/MainMenu.tscn"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0058136, -0.772659, 0.166443)
+shape = SubResource("BoxShape3D_hjrlo")
+
+[node name="Bachelor Wendigo" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.003, 0, 0, 0, 0.003, 0, 0, 0, 0.003, 0, 0, 0)
+mesh = ExtResource("2_3hlqq")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
