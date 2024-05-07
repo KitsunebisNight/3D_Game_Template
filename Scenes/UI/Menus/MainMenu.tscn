@@ -54,7 +54,6 @@ text = "Quit"
 
 [node name="Headbob" type="CheckButton" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
-button_pressed = true
 text = "Hbob"
 
 [node name="CenterContainer2" type="CenterContainer" parent="."]

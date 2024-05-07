@@ -22,7 +22,7 @@ dof_blur_far_distance = 400.0
 dof_blur_far_transition = 100.0
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_fdh7n"]
-size = Vector3(1.5014, 2.31616, 1.09991)
+size = Vector3(1.77193, 3.09503, 2.9401)
 
 [sub_resource type="Animation" id="Animation_763wf"]
 length = 0.001
@@ -202,6 +202,7 @@ _data = {
 }
 
 [node name="Player" type="CharacterBody3D"]
+collision_mask = 2
 script = ExtResource("1_qtton")
 
 [node name="CollisionShape" type="CollisionShape3D" parent="."]
@@ -209,20 +210,22 @@ shape = SubResource("2")
 
 [node name="Camera" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 1.08181, 0)
+cull_mask = 983039
 attributes = SubResource("CameraAttributesPractical_qk3vp")
 fov = 60.0
+near = 0.25
 
 [node name="PickupArea" type="Area3D" parent="Camera"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.542099, -1.23044)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.542099, -1.57638)
 collision_layer = 16
 collision_mask = 8
 script = ExtResource("2_btgl2")
 
 [node name="Hand" type="Marker3D" parent="Camera/PickupArea"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0399492, 0.14895, -0.427147)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0399492, 0.14895, 0.0780489)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Camera/PickupArea"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00308228, -0.123657, 0.0499573)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0106924, -0.166962, -0.793309)
 shape = SubResource("BoxShape3D_fdh7n")
 
 [node name="Flashlight" type="MeshInstance3D" parent="Camera"]
@@ -285,3 +288,4 @@ volume_db = 5.0
 
 [connection signal="body_entered" from="Camera/PickupArea" to="Camera/PickupArea" method="_on_body_entered"]
 [connection signal="body_exited" from="Camera/PickupArea" to="Camera/PickupArea" method="_on_body_exited"]
+[connection signal="update_console" from="Camera/PickupArea" to="." method="_on_pickup_area_update_console"]

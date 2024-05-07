@@ -100,3 +100,9 @@ func _jump(delta: float) -> Vector3:
 func add_flamethrower():
 	$Camera/Flamethrower.visible = true
 	$Pickup.play()
+	
+	
+
+
+func _on_pickup_area_update_console(message):
+	emit_signal("update_console", "Press F to pick up object.")

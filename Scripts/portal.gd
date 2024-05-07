@@ -6,6 +6,10 @@ var player_entered = false
 signal update_console
 
 func _unhandled_input(event):
+	if not player_entered:
+		return
+	if not Global.has_deepwoods_key:
+		return
 	if Input.is_action_just_pressed("portal"):
 		get_tree().change_scene_to_file(level_to_load)
 		

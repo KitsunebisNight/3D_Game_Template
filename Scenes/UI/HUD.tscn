@@ -51,8 +51,8 @@ horizontal_alignment = 1
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_top = 25.0
-offset_bottom = 48.0
+offset_top = 106.0
+offset_bottom = 147.0
 grow_horizontal = 2
 
 [node name="Console" type="Label" parent="CenterContainer2"]
