@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://b7xlgqvqn66jt"]
 
 [ext_resource type="Script" path="res://Scripts/menu.gd" id="1_vei6x"]
-[ext_resource type="Texture2D" uid="uid://dlljnc67epqrs" path="res://Scenes/Components/UI/DALL·E 2024-04-17 02.38.25 - a crisp medium shot photograph of an overgrown cabin interior.png" id="2_jprdl"]
-[ext_resource type="Texture2D" uid="uid://d1n3ogn6cwni2" path="res://Scenes/Components/UI/BIBDR Logo.png" id="3_gwkdu"]
+[ext_resource type="Texture2D" uid="uid://bq814iunqghkq" path="res://Scenes/Components/UI/DALL·E 2024-04-17 02.38.25 - a crisp medium shot photograph of an overgrown cabin interior.png" id="2_jprdl"]
+[ext_resource type="Texture2D" uid="uid://d1ny3yld42msk" path="res://Scenes/Components/UI/BIBDR Logo.png" id="3_gwkdu"]
 
 [node name="UI" type="Control"]
 layout_mode = 3
@@ -33,8 +33,8 @@ anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -176.0
-offset_bottom = -110.0
+offset_top = -295.0
+offset_bottom = -229.0
 grow_horizontal = 2
 grow_vertical = 0
 

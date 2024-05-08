@@ -1,14 +1,14 @@
 [gd_scene load_steps=7 format=3 uid="uid://bpf1ca6l42cjp"]
 
 [ext_resource type="Script" path="res://Scripts/enemy.gd" id="1_a2dd7"]
-[ext_resource type="ArrayMesh" uid="uid://bbqba1sumdxkf" path="res://Scenes/Components/Models/Character/Bachelor 3D Basemesh.obj" id="2_3hlqq"]
-[ext_resource type="AudioStream" uid="uid://bag0tj87whpbm" path="res://Scenes/Components/Sound/Wendigo SoundTest.ogg" id="3_pjsrg"]
-[ext_resource type="AudioStream" uid="uid://dl7kp8wlmduhe" path="res://Scenes/Components/Sound/Wendigo DetectTest.ogg" id="4_6ojgx"]
+[ext_resource type="ArrayMesh" uid="uid://umkt01eba74j" path="res://Scenes/Components/Models/Character/Bachelor 3D Basemesh.obj" id="2_3hlqq"]
+[ext_resource type="AudioStream" uid="uid://dwygxb7lpl76y" path="res://Scenes/Components/Sound/Wendigo SoundTest.ogg" id="3_pjsrg"]
+[ext_resource type="AudioStream" uid="uid://biod61y3xwnwj" path="res://Scenes/Components/Sound/Wendigo DetectTest.ogg" id="4_6ojgx"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_f2l5w"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_yoy3n"]
-size = Vector3(20.8768, 7.854, 22.6707)
+size = Vector3(24.2817, 7.854, 36.4856)
 
 [node name="Bachelor Wendigo" type="CharacterBody3D" groups=["enemies"]]
 collision_layer = 64
@@ -17,7 +17,7 @@ slide_on_ceiling = false
 floor_stop_on_slope = false
 floor_snap_length = 0.25
 script = ExtResource("1_a2dd7")
-speed = 5
+speed = 13
 game_over_scene = "res://Scenes/UI/Menus/MainMenu.tscn"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
@@ -34,13 +34,14 @@ mesh = ExtResource("2_3hlqq")
 collision_layer = 128
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="PlayerDetect"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0821095, 0, -10.9638)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0999127, 0, -17.8712)
 shape = SubResource("BoxShape3D_yoy3n")
 
 [node name="WendigoNoise" type="AudioStreamPlayer3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.99047, 0)
 stream = ExtResource("3_pjsrg")
 volume_db = 12.0
+autoplay = true
 max_distance = 125.0
 panning_strength = 2.0
 

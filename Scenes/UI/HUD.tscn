@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://cuyt2o7ss5rnh"]
 
 [ext_resource type="Script" path="res://Scripts/hud.gd" id="1_mumpp"]
-[ext_resource type="Texture2D" uid="uid://2fsf3aai8ic2" path="res://Scenes/Components/UI/Key Logo.png" id="1_wyf4c"]
-[ext_resource type="FontFile" uid="uid://bf16rgn4xashh" path="res://Scenes/Components/Fonts/AoyagiKouzanTOTF.otf" id="2_kgk5n"]
+[ext_resource type="Texture2D" uid="uid://d1umf60l4o4m1" path="res://Scenes/Components/UI/Key Logo.png" id="1_wyf4c"]
+[ext_resource type="FontFile" uid="uid://dp6hdpsleuacd" path="res://Scenes/Components/Fonts/AoyagiKouzanTOTF.otf" id="2_kgk5n"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ycg6g"]
 font = ExtResource("2_kgk5n")
