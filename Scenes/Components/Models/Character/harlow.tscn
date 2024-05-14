@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://bmg1vqxjeivhx"]
+
+[ext_resource type="Script" path="res://Scripts/npc.gd" id="1_75oyy"]
+[ext_resource type="PackedScene" uid="uid://4bpcb128i2ul" path="res://Scenes/Components/Models/Character/Harlow 3D.gltf" id="1_kweg0"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_askjy"]
+radius = 0.53024
+height = 3.18932
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_r2lf5"]
+size = Vector3(2.75647, 3.797, 4.39151)
+
+[node name="Harlow" type="CharacterBody3D"]
+collision_layer = 512
+collision_mask = 3
+script = ExtResource("1_75oyy")
+dialogue_file = "res://Scenes/Components/Dialogue/Harlow Survivors Camp Idling.dialogue"
+dialog_name = "Harlow Camp Idling"
+
+[node name="Harlow 3D" parent="." instance=ExtResource("1_kweg0")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0699414, 1.70422, 0)
+shape = SubResource("CapsuleShape3D_askjy")
+
+[node name="DialogueDetector" type="Area3D" parent="."]
+collision_layer = 1024
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DialogueDetector"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0718384, 1.3985, 1.69576)
+shape = SubResource("BoxShape3D_r2lf5")
+
+[connection signal="body_entered" from="DialogueDetector" to="." method="_on_dialogue_detector_body_entered"]

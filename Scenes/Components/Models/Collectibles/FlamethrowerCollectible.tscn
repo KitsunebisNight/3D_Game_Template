@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://f4mg0ebtx5xw"]
 
 [ext_resource type="Script" path="res://Scripts/Collectible.gd" id="1_dtgi3"]
-[ext_resource type="PackedScene" uid="uid://3jvo81chn0m5" path="res://Scenes/Components/Models/Prop/Flamethrower.gltf" id="2_4ffdt"]
-[ext_resource type="PackedScene" uid="uid://0ttj75ru1uuc" path="res://Scenes/Components/Models/Prop/FlamethrowerPack.gltf" id="4_iyys3"]
+[ext_resource type="PackedScene" uid="uid://w1vc1nfdpryu" path="res://Scenes/Components/Models/Weapons/Flamethrower.gltf" id="2_4ffdt"]
+[ext_resource type="PackedScene" uid="uid://bq5qsuaiscmw5" path="res://Scenes/Components/Models/Weapons/FlamethrowerPack.gltf" id="4_iyys3"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y6g7p"]
 size = Vector3(1.07696, 0.745321, 1.223)

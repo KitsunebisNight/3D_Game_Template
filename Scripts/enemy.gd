@@ -23,7 +23,7 @@ func _physics_process(delta):
 		return
 	
 	# if enemy gets close to patrol target, set the next target
-	if nav_agent.distance_to_target() < 1 and not is_following_player:
+	if nav_agent.distance_to_target() < 2 and not is_following_player:
 		patrol_index = patrol_index + 1
 		if patrol_index >= patrol_locations.size():
 			patrol_index = 0

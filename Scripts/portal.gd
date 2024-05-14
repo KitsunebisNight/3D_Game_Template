@@ -18,7 +18,7 @@ func _on_body_entered(body):
 	if not Global.has_deepwoods_key:
 		emit_signal("update_console", "Get the key to the Deepwoods")
 	else:
-		emit_signal("update_console", "Press R to travel")
+		emit_signal("update_console", "Press E to travel")
 
 func _on_body_exited(body):
 	player_entered = false

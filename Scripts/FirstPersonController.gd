@@ -24,6 +24,8 @@ var jump_vel: Vector3 # Jumping velocity
 var sprint_speed: float = speed * 2.6
 var original_speed: float = speed
 
+var is_talking : bool = false
+
 @onready var camera: Camera3D = $Camera
 @onready var anim_play = $Camera/AnimationPlayer
 @onready var flashlight: MeshInstance3D = $Camera/Flashlight
@@ -50,6 +52,8 @@ func _unhandled_input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("exit"): get_tree().quit()
 
 func _physics_process(delta: float) -> void:
+	if is_talking:
+		return
 	if mouse_captured: _handle_joypad_camera_rotation(delta)
 	velocity = _walk(delta) + _gravity(delta) + _jump(delta)
 	move_and_slide()
@@ -101,8 +105,5 @@ func add_flamethrower():
 	$Camera/Flamethrower.visible = true
 	$Pickup.play()
 	
-	
-
-
 func _on_pickup_area_update_console(message):
 	emit_signal("update_console", "Press F to pick up object.")
